@@ -1,3 +1,4 @@
+class_name ScoreLabel
 extends Label
 
 var score: int = 0

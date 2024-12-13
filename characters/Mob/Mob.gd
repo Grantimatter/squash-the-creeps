@@ -1,3 +1,4 @@
+class_name Mob
 extends CharacterBody3D
 
 signal squashed

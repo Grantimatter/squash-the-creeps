@@ -6,7 +6,7 @@ func _ready():
 	$UserInterface/Retry.hide()
 
 func _on_mob_timer_timeout() -> void:
-	var mob: Node = mob_scene.instantiate()
+	var mob: Mob = mob_scene.instantiate()
 	var mob_spawn_location: Node = get_node("SpawnPath/SpawnLocation")
 	mob_spawn_location.progress_ratio = randf() 
 	var player_position: Vector3 = $Player.position

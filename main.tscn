@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://b42piu8yac0i6"]
 
-[ext_resource type="PackedScene" uid="uid://bnoq2g34vi1j3" path="res://Scenes/player.tscn" id="1_88f8h"]
-[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_slcri"]
-[ext_resource type="PackedScene" uid="uid://b1cw33310vb71" path="res://Scenes/mob.tscn" id="2_pad4t"]
+[ext_resource type="Script" path="res://Main.gd" id="1_slcri"]
+[ext_resource type="PackedScene" uid="uid://b1cw33310vb71" path="res://characters/Mob/mob.tscn" id="2_g5tei"]
+[ext_resource type="PackedScene" uid="uid://bnoq2g34vi1j3" path="res://characters/Player/player.tscn" id="3_bsshv"]
 [ext_resource type="FontFile" uid="uid://cxqtq04u7l6sv" path="res://fonts/Montserrat-Medium.ttf" id="4_5h1bc"]
-[ext_resource type="Script" path="res://Scripts/score_label.gd" id="5_36b2m"]
+[ext_resource type="Script" path="res://ui/score_label.gd" id="5_wpkxo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_87qme"]
 size = Vector3(60, 2, 60)
@@ -31,7 +31,7 @@ default_font_size = 22
 
 [node name="Main" type="Node"]
 script = ExtResource("1_slcri")
-mob_scene = ExtResource("2_pad4t")
+mob_scene = ExtResource("2_g5tei")
 
 [node name="Ground" type="StaticBody3D" parent="."]
 collision_layer = 4
@@ -48,7 +48,7 @@ mesh = SubResource("BoxMesh_t2xif")
 transform = Transform3D(0.842941, -0.331725, -0.423567, 0.425131, -0.0717929, 0.90228, -0.329718, -0.94064, 0.0805095, 0, 19.6701, 0)
 shadow_enabled = true
 
-[node name="Player" parent="." instance=ExtResource("1_88f8h")]
+[node name="Player" parent="." instance=ExtResource("3_bsshv")]
 
 [node name="CameraPivot" type="Marker3D" parent="."]
 
@@ -127,7 +127,7 @@ offset_right = 166.0
 offset_bottom = 91.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Score: 0"
-script = ExtResource("5_36b2m")
+script = ExtResource("5_wpkxo")
 
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
