@@ -1,6 +1,6 @@
 extends Label
 
-var score = 0
+var score: int = 0
 
 func _on_mob_squashed():
 	score += 1

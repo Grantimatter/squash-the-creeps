@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://b42piu8yac0i6"]
 
-[ext_resource type="PackedScene" uid="uid://bnoq2g34vi1j3" path="res://player.tscn" id="1_88f8h"]
-[ext_resource type="Script" path="res://Main.gd" id="1_slcri"]
-[ext_resource type="PackedScene" uid="uid://b1cw33310vb71" path="res://mob.tscn" id="2_pad4t"]
+[ext_resource type="PackedScene" uid="uid://bnoq2g34vi1j3" path="res://Scenes/player.tscn" id="1_88f8h"]
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="1_slcri"]
+[ext_resource type="PackedScene" uid="uid://b1cw33310vb71" path="res://Scenes/mob.tscn" id="2_pad4t"]
 [ext_resource type="FontFile" uid="uid://cxqtq04u7l6sv" path="res://fonts/Montserrat-Medium.ttf" id="4_5h1bc"]
-[ext_resource type="Script" path="res://score_label.gd" id="5_36b2m"]
+[ext_resource type="Script" path="res://Scripts/score_label.gd" id="5_36b2m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_87qme"]
 size = Vector3(60, 2, 60)
@@ -80,7 +80,7 @@ mesh = SubResource("CylinderMesh_wu8v0")
 curve = SubResource("Curve3D_1ksc1")
 
 [node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
-transform = Transform3D(-0.0149238, 0, -0.999889, 0, 1, 0, 0.999889, 0, -0.0149238, -15.0669, 0, -13.1514)
+transform = Transform3D(-0.0149246, 0, -0.999889, 0, 1, 0, 0.999889, 0, -0.0149246, -15.0669, 0, -13.1514)
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
