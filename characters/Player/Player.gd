@@ -1,5 +1,4 @@
-class_name Player
-extends CharacterBody3D
+class_name Player extends CharacterBody3D
 signal hit
 
 # How fast the player moves in meters per second
